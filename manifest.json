@@ -1,0 +1,31 @@
+{
+    "name": "Mondia devtools",
+    "description": "Mondia devtools",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "/images/mondia-logo-16.png",
+        "32": "/images/mondia-logo-32.png",
+        "48": "/images/mondia-logo-48.png",
+        "128": "/images/mondia-logo-128.png"
+      }
+    },
+    "icons": {
+        "16": "/images/mondia-logo-16.png",
+        "32": "/images/mondia-logo-32.png",
+        "48": "/images/mondia-logo-48.png",
+        "128": "/images/mondia-logo-128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://localhost:*/*"], 
+        "js": ["content_script.js"]
+      }
+    ]
+  }
